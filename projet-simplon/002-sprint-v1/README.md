@@ -2,7 +2,7 @@
 
 Cliquer sur ce lien :
 
-https://allantur.github.io/model/projet-simplon/001-sprint-v1/contact.html
+https://allantur.github.io/model/projet-simplon/002-sprint-v1/contact.html
 
 ### SPRINT_02
 
