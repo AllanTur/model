@@ -1,0 +1,89 @@
+PSEUDO CODE
+
+Ce programme permet a l'utilisateur d'insérer un nom pour créer une liste de personne. Permet de generer un nombre de groupe voulu par l'utilisateur,
+de répartie les personne aléatoirement dans c'est groupe et de façon equitable.
+
+listPersonne<- nouveauTableau()
+
+
+FONCTION  addUserInfo
+DEBUT 
+	UserAdd <- la valeur de userInput
+	SI userAdd est differrent ALORS:
+		 listPersonne<- rajoute userAdd
+		appelle la fonction showUserInfo (qui a les valeur dans le tableau)
+	FIN SI
+FIN
+
+
+FONCTION showUserInfo
+DEBUT
+	showUser <- VIDE
+	counter <- 0
+
+	POUR CHAQUE ITERATION RAJOUTER word DANS LE TABLEAU listPersonne ALORS:
+		INCREMENTER showInfo a chaque word =>
+			crée une "liste" est dans cette liste il y a un "paragraphe" ayant le "word" avec un "boutton" a droite sur laquelle on appelle une fonction pour effacer
+			cette "liste"
+	FIN POUR
+
+	met le showInfo dans l'HTML et precisement dans la div qui a pour "id" "display" 
+	dans le cas ou la valeur userInput est VIDE le renvoi dans la fonction
+	rend vide l'input (id userInput) apres chaque ajout d'un nom
+	RETOURNER listPersonne
+FIN
+
+FONCTION removeName(param1)
+DEBUT
+	Efface 1 valeur choisi dans la listPersonne
+	appelle la fonction showUserInfo pour savoir quelle "liste" efface
+Fin
+
+FONCTION go
+DEBUT
+	names <- listPersonne
+	number <- la valeur de l'id "number" dans notre code HTML
+
+	names_list <- names (J'aurais garder names)
+	group <- nouveauTableau()
+
+	POUR i <- 0; i strictement plus petit que number; rajoute  +1 a i ALORS:
+		crée 2 occurence dans le tableau "group"
+	FIN POUR
+FIN
+
+size <- name_list.length (attribue a la variable "size" le nombre d'occurence qui dans le tableau listPersonne)
+groupID <- 0
+
+	POUR i <- 0; i strictement plus petit que size; rajoute 1 a i ALORS:
+	rand <- melange les nombre des occcurence de la variable names_list (qui est les valeurs du tableau listPersonne)
+	met les occurrence du tableau group(des tableau dans un tableau)
+	rajoute les nom de facon aleatoire dans une occurence du tableau group
+
+	ajoute 1 groupID
+		SI groupID est superieur ou egale number ALORS:
+			groupID <- 0
+		FIN SI
+	FIN POUR
+
+htmlresult <- vide
+
+POUR i <- 0; i strictement plus petit que (group.length) le nombre d'occurence dans le tableau group ALORS:
+	ajoute dans htmlresult un paragraphe en gras GROUPE i + 1 et met dans une liste desordonné
+		POUR j <- 0; j strictement plus petit que le nombre group[i].length sinon rajoute une list undefined; j++ ALORS:
+			ajoute dans htmlresult la liste des nom des participant
+		FIN POUR
+	htmlresult referme la liste desordonner
+FIN POUR
+
+id result dans l'HTML <- htmlresult
+
+
+
+
+
+
+
+
+
+
