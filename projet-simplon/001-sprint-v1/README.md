@@ -1,3 +1,7 @@
+# Lien vers le projet :
+
+https://allantur.github.io/model/projet-simplon/001-sprint-v1/generateur.html
+
 # Sprint 001 : Créez un générateur de groupe aléatoire
 
 ![](https://simplonline.co/_next/image?url=https%3A%2F%2Fsimplonline-v3-prod.s3.eu-west-3.amazonaws.com%2Fmedia%2Fimage%2Fpng%2Fd5d92489-2372-4060-8bdf-eb6ae8fdae30.png&w=1280&q=75)
